@@ -1,0 +1,104 @@
+Commands
+
+python --version
+pip --version
+pip install uv
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+
+********************************
+
+specify init <PROJECT_NAME>
+
+*****************************************************
+/constitution
+
+Create a professional constitution file for a .NET 10 Web API project.
+
+The constitution should define the foundational standards, architecture guidelines, and coding principles for the entire solution to ensure maintainability, scalability, consistency, and ease of onboarding.
+
+Include the following sections:
+
+* Basic project structure(Project.Api, Project.DTO, Project.Database, Project.Utiliry, Project.service, Project.Repository, Project.UnitTest)
+* Coding standards and naming conventions
+* SOLID principles as mandatory development guidelines
+* Repository design pattern with service layer separation
+* Proper dependency injection and interface-based design
+* .NET 10 as the application framework
+* Entity Framework Core using Code-First approach
+* SQLite as the default database
+* API standards including RESTful conventions, versioning, request/response DTO usage, and standard API response structure
+* Common API response model for success and failure cases
+* Global exception handling middleware
+* Structured logging using ILogger
+* Unit testing standards using xUnit and Moq - Write code first then unit test
+* Clean architecture and separation of concerns
+* Security baseline and validation standards
+
+The generated constitution should be written in a professional markdown format and act as the standard rulebook for all future specifications, plans, tasks, and implementation.
+
+*****************************************************************************************************
+/specify
+Create a basic feature specification for a .NET 10 Web API project.
+
+Requirement:
+Create a new project and implement JWT authentication.
+
+The project should include:
+
+A login API where the user enters username and password
+On successful login, return a Bearer token
+A GET API for authenticated users to fetch their details
+Proper project structure as per the constitution
+Use SQLite database and Entity Framework Core
+Follow coding standards, dependency injection, logging, and global error handling
+Include basic unit tests using xUnit and Moq
+
+/speckit.specify I do not want user registration
+
+***************************************************************
+/clarify
+
+*************************************************************
+/Plan
+
+Create an implementation plan for the above feature specification.
+
+The plan should include step-by-step implementation tasks for:
+
+* Creating the .NET 10 Web API project structure
+
+* Configuring Entity Framework Core with SQLite using Code-First approach
+
+* Creating the User entity with fields such as:
+
+  * Id
+  * FirstName
+  * LastName
+  * Address
+  * Username
+  * Password
+  * CreatedDate
+
+* Adding Code-First migration and database creation
+
+* Seeding 2 to 3 sample user during migration or DbContext model creation and keep password as 'admin' for them
+
+* Implementing JWT authentication setup and configuration
+
+* Creating login API to validate username and password and generate Bearer token
+
+* Creating authenticated GET API to fetch logged-in user details
+
+* Adding dependency injection for services and repositories
+
+* Implementing global exception handling and logging
+
+* Writing basic unit tests using xUnit and Moq
+
+******************************************
+/tasks
+
+/speckit.analyze
+
+/speckit.implement
+

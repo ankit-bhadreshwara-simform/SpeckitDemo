@@ -1,0 +1,28 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+.vs/
+packages/
+
+# Local secrets and the SQLite file created at runtime
+src/SpeckitDemo.Api/appsettings.Development.json
+*.db
+*.db-shm
+*.db-wal
+
+publish/
+out/
+*.log
+logs/
+
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+.vscode/
+.idea/
+*.iml

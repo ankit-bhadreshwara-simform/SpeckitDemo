@@ -1,0 +1,14 @@
+@host = http://localhost:5022
+
+### Sign in
+POST {{host}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "username": "mira",
+  "password": "admin"
+}
+
+### Current profile
+GET {{host}}/api/v1/users/me
+Authorization: Bearer {{token}}
